@@ -1,4 +1,9 @@
 title: Ogongchill
 description: github pages for 507
-theme: jekyll-theme-yatb
+# theme: jekyll-theme-yatb
 markdown: kramdown
+remote_theme: "jeffreytse/jekyll-theme-yat"
+
+# Add the following to activate the plugin
+plugins:
+  - jekyll-remote-theme
