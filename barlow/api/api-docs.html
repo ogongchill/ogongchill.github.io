@@ -630,15 +630,15 @@ Host: barlow.com
 Content-Length: 205
 
 {
-  "deviceId" : "device_id_new",
-  "deviceOs" : "ios",
-  "nickname" : "nniicckknnaammee",
   "deviceToken" : "device_token_new",
   "termAgreements" : {
+    "1" : true,
     "2" : true,
-    "3" : false,
-    "1" : true
-  }
+    "3" : false
+  },
+  "deviceId" : "device_id_new",
+  "deviceOs" : "ios",
+  "nickname" : "nniicckknnaammee"
 }</code></pre>
 </div>
 </div>
@@ -648,7 +648,7 @@ Content-Length: 205
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 201 Created
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 537
@@ -737,9 +737,9 @@ Host: barlow.com
 Content-Length: 90
 
 {
+  "deviceOs" : "ios",
   "deviceId" : "device_id_1",
-  "deviceToken" : "device_token_1",
-  "deviceOs" : "ios"
+  "deviceToken" : "device_token_1"
 }</code></pre>
 </div>
 </div>
@@ -749,7 +749,7 @@ Content-Length: 90
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 537
@@ -839,19 +839,19 @@ Content-Length: 321
 
 {
   "oidcPayload" : {
-    "idToken" : "mock_id_token",
-    "authProvider" : "KAKAO"
+    "authProvider" : "KAKAO",
+    "idToken" : "mock_id_token"
   },
   "termAgreements" : {
+    "1" : true,
     "2" : true,
-    "3" : false,
-    "1" : true
+    "3" : false
   },
   "signupPayload" : {
-    "deviceToken" : "oidc_device_token",
-    "nickname" : "oidc_user",
     "deviceId" : "oidc_device_id",
-    "deviceOs" : "ios"
+    "deviceOs" : "ios",
+    "deviceToken" : "oidc_device_token",
+    "nickname" : "oidc_user"
   }
 }</code></pre>
 </div>
@@ -862,7 +862,7 @@ Content-Length: 321
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 201 Created
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 539
@@ -965,8 +965,8 @@ Content-Length: 89
 
 {
   "oidcPayload" : {
-    "idToken" : "mock_id_token",
-    "authProvider" : "KAKAO"
+    "authProvider" : "KAKAO",
+    "idToken" : "mock_id_token"
   }
 }</code></pre>
 </div>
@@ -977,7 +977,7 @@ Content-Length: 89
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 537
@@ -1071,13 +1071,13 @@ Host: barlow.com
 Content-Length: 181
 
 {
+  "deviceId" : "device_id_3",
+  "deviceOs" : "android",
   "deviceToken" : "device_token_3",
   "oidcPayload" : {
-    "idToken" : "mock_id_token",
-    "authProvider" : "KAKAO"
-  },
-  "deviceId" : "device_id_3",
-  "deviceOs" : "android"
+    "authProvider" : "KAKAO",
+    "idToken" : "mock_id_token"
+  }
 }</code></pre>
 </div>
 </div>
@@ -1087,7 +1087,7 @@ Content-Length: 181
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 539
@@ -1189,7 +1189,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:18 GMT
+Date: Mon, 16 Mar 2026 16:10:21 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 477
@@ -1328,7 +1328,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:18 GMT
+Date: Mon, 16 Mar 2026 16:10:21 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 61
@@ -1392,7 +1392,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:21 GMT
+Date: Mon, 16 Mar 2026 16:10:24 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 827
@@ -1562,7 +1562,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:21 GMT
+Date: Mon, 16 Mar 2026 16:10:24 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 122
@@ -1670,7 +1670,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 476
@@ -1789,7 +1789,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 605
@@ -1951,7 +1951,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:21 GMT
+Date: Mon, 16 Mar 2026 16:10:24 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 2114
@@ -2158,7 +2158,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:21 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 289
@@ -2276,7 +2276,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:21 GMT
+Date: Mon, 16 Mar 2026 16:10:24 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 2344
@@ -2487,7 +2487,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 320
@@ -2620,7 +2620,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 833
@@ -2789,7 +2789,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 698
@@ -2922,7 +2922,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:20 GMT
+Date: Mon, 16 Mar 2026 16:10:23 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 2114
@@ -3242,7 +3242,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:21 GMT
+Date: Mon, 16 Mar 2026 16:10:24 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 224
@@ -3251,9 +3251,9 @@ Content-Length: 224
   "result" : "SUCCESS",
   "data" : {
     "reactions" : {
+      "DISLIKE" : 1,
       "HMM" : 1,
-      "LIKE" : 2,
-      "DISLIKE" : 1
+      "LIKE" : 2
     },
     "status" : {
       "reactionType" : "LIKE",
@@ -3370,8 +3370,8 @@ Host: barlow.com
 Content-Length: 62
 
 {
-  "targetType" : "BILL_POST",
-  "reactionType" : "DISLIKE"
+  "reactionType" : "DISLIKE",
+  "targetType" : "BILL_POST"
 }</code></pre>
 </div>
 </div>
@@ -3381,7 +3381,7 @@ Content-Length: 62
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 201 Created
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:21 GMT
+Date: Mon, 16 Mar 2026 16:10:24 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 61
@@ -3518,7 +3518,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Mon, 16 Mar 2026 09:03:21 GMT
+Date: Mon, 16 Mar 2026 16:10:24 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 61
@@ -3564,7 +3564,7 @@ Content-Length: 61
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2026-03-16 09:02:29 UTC
+Last updated 2026-03-16 16:09:25 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
