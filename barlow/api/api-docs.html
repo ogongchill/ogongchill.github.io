@@ -630,15 +630,15 @@ Host: barlow.com
 Content-Length: 205
 
 {
-  "termAgreements" : {
-    "2" : true,
-    "3" : false,
-    "1" : true
-  },
   "deviceId" : "device_id_new",
   "deviceOs" : "ios",
   "nickname" : "nniicckknnaammee",
-  "deviceToken" : "device_token_new"
+  "deviceToken" : "device_token_new",
+  "termAgreements" : {
+    "3" : false,
+    "1" : true,
+    "2" : true
+  }
 }</code></pre>
 </div>
 </div>
@@ -648,7 +648,7 @@ Content-Length: 205
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 201 Created
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 537
@@ -749,7 +749,7 @@ Content-Length: 90
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 537
@@ -843,15 +843,15 @@ Content-Length: 321
     "authProvider" : "KAKAO"
   },
   "termAgreements" : {
-    "2" : true,
     "3" : false,
-    "1" : true
+    "1" : true,
+    "2" : true
   },
   "signupPayload" : {
-    "deviceToken" : "oidc_device_token",
     "nickname" : "oidc_user",
     "deviceId" : "oidc_device_id",
-    "deviceOs" : "ios"
+    "deviceOs" : "ios",
+    "deviceToken" : "oidc_device_token"
   }
 }</code></pre>
 </div>
@@ -862,7 +862,7 @@ Content-Length: 321
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 201 Created
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 539
@@ -956,9 +956,9 @@ Content-Length: 539
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">PATCH /api/v1/auth/oidc/role HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com
 Content-Length: 89
@@ -977,7 +977,7 @@ Content-Length: 89
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 537
@@ -1071,13 +1071,13 @@ Host: barlow.com
 Content-Length: 181
 
 {
-  "deviceToken" : "device_token_3",
   "oidcPayload" : {
     "idToken" : "mock_id_token",
     "authProvider" : "KAKAO"
   },
   "deviceId" : "device_id_3",
-  "deviceOs" : "android"
+  "deviceOs" : "android",
+  "deviceToken" : "device_token_3"
 }</code></pre>
 </div>
 </div>
@@ -1087,7 +1087,7 @@ Content-Length: 181
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 539
@@ -1189,7 +1189,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:51:57 GMT
+Date: Tue, 24 Mar 2026 06:13:37 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 477
@@ -1328,7 +1328,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:51:57 GMT
+Date: Tue, 24 Mar 2026 06:13:37 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 61
@@ -1392,7 +1392,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:01 GMT
+Date: Tue, 24 Mar 2026 06:13:40 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 827
@@ -1548,9 +1548,9 @@ Content-Length: 827
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/client-versions HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 X-App-Version: 1.5.0
 X-Device-Os: ANDROID
 Host: barlow.com</code></pre>
@@ -1562,7 +1562,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:01 GMT
+Date: Tue, 24 Mar 2026 06:13:40 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 122
@@ -1657,9 +1657,9 @@ Content-Length: 122
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/home HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -1670,7 +1670,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 476
@@ -1776,9 +1776,9 @@ Content-Length: 476
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/home/notification-center HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -1789,7 +1789,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 605
@@ -1938,9 +1938,9 @@ Content-Length: 605
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/recent-bills/PRC_1 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -1951,7 +1951,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:01 GMT
+Date: Tue, 24 Mar 2026 06:13:40 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 2114
@@ -2145,9 +2145,9 @@ Content-Length: 2114
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/pre-announcement-bills HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -2158,7 +2158,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:01 GMT
+Date: Tue, 24 Mar 2026 06:13:40 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 289
@@ -2263,9 +2263,9 @@ Content-Length: 289
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/pre-announcement-bills/PRC_3 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -2276,7 +2276,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:01 GMT
+Date: Tue, 24 Mar 2026 06:13:40 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 2344
@@ -2474,9 +2474,9 @@ Content-Length: 2344
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/legislation-accounts/HOUSE_STEERING/profile HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -2487,7 +2487,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 320
@@ -2607,9 +2607,9 @@ Content-Length: 320
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/legislation-accounts/committees/info HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -2620,7 +2620,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 833
@@ -2776,9 +2776,9 @@ Content-Length: 833
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/legislation-accounts/HOUSE_STEERING/bill-posts?page=0&amp;size=10 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -2789,7 +2789,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 698
@@ -2909,9 +2909,9 @@ Content-Length: 698
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/legislation-accounts/bill-posts/PRC_1 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -2922,7 +2922,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:00 GMT
+Date: Tue, 24 Mar 2026 06:13:39 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 2114
@@ -3229,9 +3229,9 @@ Content-Length: 2114
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/v1/reactions/PRC_1?targetType=BILL_POST HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -3242,7 +3242,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:01 GMT
+Date: Tue, 24 Mar 2026 06:13:40 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 224
@@ -3362,9 +3362,9 @@ Content-Length: 224
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">POST /api/v1/reactions/PRC_4 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com
 Content-Length: 62
@@ -3381,7 +3381,7 @@ Content-Length: 62
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 201 Created
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:01 GMT
+Date: Tue, 24 Mar 2026 06:13:40 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 61
@@ -3505,9 +3505,9 @@ Content-Length: 61
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">DELETE /api/v1/reactions/PRC_1?targetType=BILL_POST&amp;reactionType=LIKE HTTP/1.1
 Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiYXJsb3ctY29yZS1hdXRoIiwibWVtYmVyTm8iOjEsInJvbGUiOiJHVUVTVCJ9.IU3HW86cEmNzGazlsxzh9bOVfXq8VZzGufaL9jKpara1xlqIzSe4C59plPu9TyEWdHUSWhNKqbqBA-NqjYJHD-JRylIz-rGBsKDKAsC2PTSEUbGRfRfMdRNZLF9oVBrGVM4dBL3IBXddH9goccHis1jaQnDoOkkEuGDyjgEx3Vxu_-EJaXF1Jf_njCYvlMy4ljayYi5hVWvsMLGhyaXfv4grBiJNm9DXk7DdTmsY4ch6Nh8BiodLRb4yDZ5JsqlVcOmQS-NfFgzQlRDtty5duqdB6pdHhHoFIGUVGPxFme_5UD-_p2AkRDDwMiETeBStxkPamF3vuXLt0cfQu0c_Gg
-X-Client-OS-Version: device_os_version
 X-Client-OS: ios
 X-Device-ID: device_id_value_1
+X-Client-OS-Version: device_os_version
 Content-Type: application/json
 Host: barlow.com</code></pre>
 </div>
@@ -3518,7 +3518,7 @@ Host: barlow.com</code></pre>
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 24 Mar 2026 05:52:01 GMT
+Date: Tue, 24 Mar 2026 06:13:40 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 Content-Length: 61
@@ -3564,7 +3564,7 @@ Content-Length: 61
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2026-03-24 05:51:13 UTC
+Last updated 2026-03-24 06:12:47 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
